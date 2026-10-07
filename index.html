@@ -10,14 +10,23 @@
 </head>
 
 <body>
-    <label>Your score</label>
-    <h1 id="headNum">0</h1>
-    <div id="deckPlayer" class="deck"></div>
-    <label>House score</label>
-    <h1 id="headHouse">0</h1>
-    <div id="deckHouse" class="deck"></div>
-    <button id="btnFold">Fold</button>
-    <button id="btnHit">Hit</button>
+    <div id="playerContainer" class="container">
+        <label>Your score</label>
+        <h1 id="headNum">0</h1>
+        <div id="deckPlayer" class="deck"></div>
+    </div>
+
+    <div id="houseContainer"  class="container">
+        <label>House score</label>
+        <h1 id="headHouse">0</h1>
+        <div id="deckHouse" class="deck"></div>
+    </div>
+
+    <div id="buttonContainer">
+        <button id="btnFold">Fold</button>
+        <button id="btnHit">Hit</button>
+    </div>
+
     <script src="index.js"> </script>
 
 
