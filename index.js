@@ -30,6 +30,11 @@ function dealHouse() {
     // Increase house counter
     numHouse = Number(numHouse);
     numHouse += numRan2;
+
+    document.getElementById("deckHouse");
+    var div_card = document.createElement('div');
+    div_card.className = 'card';
+    document.getElementById('deckHouse').appendChild(div_card);
 }
 
 function dealPlayer() {
@@ -37,6 +42,11 @@ function dealPlayer() {
     // Increase player counter
     numPlayer = Number(numPlayer);
     numPlayer += numRan1;
+
+    document.getElementById("deckPlayer");
+    var div_card = document.createElement('div');
+    div_card.className = 'card';
+    document.getElementById('deckPlayer').appendChild(div_card);
 }
 
 function checkWin() {
@@ -89,13 +99,14 @@ document.getElementById("btnFold").onclick = function () {
         numPlayer = 0;
         numHouse = 0;
         update();
-    } else { 
+    } else {
         displayWin(false);
         numPlayer = 0;
         numHouse = 0;
         update();
     }
 }
+
 
 document.getElementById("btnClose").onclick = function () {
     console.log("I clicked a button");
