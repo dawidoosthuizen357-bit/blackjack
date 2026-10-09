@@ -6,12 +6,14 @@ let numHouse = 0;
 function displayWin(win) {
     const dialog = document.getElementById('dialog');
     if (win) {
-        document.getElementById("txtEnd").textContent = `You win! P:${numPlayer}: H:${numHouse}`;
+        document.getElementById("txtEnd").textContent = `You win! P:${numPlayer} H:${numHouse}`;
         dialog.show();
     } else {
-        document.getElementById("txtEnd").textContent = `You lose! P:${numPlayer}: H:${numHouse}`;
+        document.getElementById("txtEnd").textContent = `You lose! P:${numPlayer} H:${numHouse}`;
         dialog.show();
     }
+    document.getElementById("deckPlayer").replaceChildren();
+    document.getElementById("deckHouse").replaceChildren();
 }
 
 function closeModal() {
@@ -105,9 +107,4 @@ document.getElementById("btnFold").onclick = function () {
         numHouse = 0;
         update();
     }
-}
-
-
-document.getElementById("btnClose").onclick = function () {
-    console.log("I clicked a button");
 }
